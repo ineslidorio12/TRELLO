@@ -140,4 +140,3 @@ class Sidebar(ft.Container):
         self.bottom_nav_rail.selected_index = index
         self.page.route = f"/board/{index}"
         self.page.update()
-        
