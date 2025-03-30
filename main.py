@@ -174,7 +174,7 @@ class TrelloApp(AppLayout):
 def main(page: ft.Page):
 
     page.title = "Flet Trello clone"
-    page.window_window_icon = "icon.ico"
+    #page.window_window_icon = "icon.ico"
     page.padding = 0
     page.theme = ft.Theme(font_family="Verdana")
     page.theme_mode = ft.ThemeMode.LIGHT
@@ -190,5 +190,6 @@ def main(page: ft.Page):
 print("flet version: ", ft.version.version)
 print("flet path: ", ft.__file__)
 
-assets_dir = os.path.abspath("assets")
-ft.app(target=main, assets_dir=assets_dir, view=ft.FLET_APP)
+#assets_dir = os.path.abspath("assets")
+#assets_dir=assets_dir
+ft.app(target=main,  view=ft.FLET_APP)
