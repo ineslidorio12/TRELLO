@@ -1,10 +1,10 @@
 import flet as ft
+import os
 from app_layout import AppLayout
 from board import Board
 from user import User
 from data_store import DataStore
 from memory_store import InMemoryStore
-from user import User
 
 
 class TrelloApp(AppLayout):
@@ -174,6 +174,7 @@ class TrelloApp(AppLayout):
 def main(page: ft.Page):
 
     page.title = "Flet Trello clone"
+    page.window_window_icon = "icon.ico"
     page.padding = 0
     page.theme = ft.Theme(font_family="Verdana")
     page.theme_mode = ft.ThemeMode.LIGHT
@@ -188,4 +189,6 @@ def main(page: ft.Page):
 
 print("flet version: ", ft.version.version)
 print("flet path: ", ft.__file__)
-ft.app(target=main, assets_dir="../assets")
+
+assets_dir = os.path.abspath("assets")
+ft.app(target=main, assets_dir=assets_dir, view=ft.FLET_APP)
